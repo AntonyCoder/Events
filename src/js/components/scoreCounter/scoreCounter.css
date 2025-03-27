@@ -1,0 +1,9 @@
+.score-counter {
+    display: flex;
+    margin: 20px auto;
+    justify-content: center;
+    width: 100px;
+    padding: 5px 0;
+    background-color: lightblue;
+    border-radius: 10px;
+}
