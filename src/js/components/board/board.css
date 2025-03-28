@@ -4,6 +4,7 @@
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: repeat(4, 100px);
     gap: 5px;
+    cursor: none;
 }
 
 .container-disabled{
@@ -15,6 +16,7 @@
     height: 100px;
     margin: 0 auto;
     border-radius: 25px;
+    cursor: default;
 }
 
 .cell {

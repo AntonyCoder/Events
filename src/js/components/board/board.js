@@ -9,10 +9,6 @@ export class Board {
         this.onGoblinCellClick = this.onGoblinCellClick.bind(this);
 
         this.goblinCounter = 0;
-
-
-
-
     }
 
     renderBoard() {
@@ -61,7 +57,6 @@ export class Board {
         if (e.target.classList.contains('cell-active')) {
             scoreCounter.changeScore(1);
             this.body.removeEventListener('click', this.onGoblinCellClick);
-            console.log(scoreCounter.score);
         }
     }
 

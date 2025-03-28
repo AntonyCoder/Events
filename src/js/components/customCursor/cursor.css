@@ -1,0 +1,10 @@
+.custom-cursor{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: url('../../../img/hummer.png') no-repeat;
+    background-position: top left;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 9999;
+}
