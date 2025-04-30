@@ -10,8 +10,8 @@ export class Cursor {
 
         container.addEventListener('mousemove', (e) => {
 
-            cursor.style.left = `${e.pageX - 75}px`;
-            cursor.style.top = `${e.pageY - 50}px`;
+            cursor.style.left = `${e.clientX - 75}px`;
+            cursor.style.top = `${e.clientY - 50}px`;
         })
     }
 }

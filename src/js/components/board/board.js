@@ -6,7 +6,7 @@ export class Board {
     constructor() {
         this.body = document.querySelector('body');
         this.container = document.createElement('div');
-        this.onGoblinCellClick = this.onGoblinCellClick.bind(this);
+        this.onBoardCellClick = this.onBoardCellClick.bind(this);
 
         this.goblinCounter = 0;
     }
@@ -34,6 +34,7 @@ export class Board {
 
     showGoblin() {
         const cells = document.querySelectorAll('.cell');
+        console.log(cells);
         if (cells) {
             const position = this.getRandomInt();
             cells[position].classList.add('cell-active');
@@ -45,7 +46,7 @@ export class Board {
                     const newPosition = this.getRandomInt();
                     cells[newPosition].classList.add('cell-active');
                     this.goblinCounter++;
-                    this.body.addEventListener('click', this.onGoblinCellClick);
+                    this.body.addEventListener('click', this.onBoardCellClick);
                     this.gameOver();
                 }
             }, 1000)
@@ -53,16 +54,16 @@ export class Board {
 
     }
 
-    onGoblinCellClick(e) {
+    onBoardCellClick(e) {
         if (e.target.classList.contains('cell-active')) {
             scoreCounter.changeScore(1);
-            this.body.removeEventListener('click', this.onGoblinCellClick);
+            this.body.removeEventListener('click', this.onBoardCellClick);
         }
     }
 
     gameOver() {
         if (this.goblinCounter - scoreCounter.score > 5) {
-            this.container.classList.add('container-disabled')
+            this.container.classList.add('container-disabled');
             this.container.textContent = "Game Over!"
         }
     }
